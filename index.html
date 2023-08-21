@@ -6,15 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davie's Burgers Order Form</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <section>
-        <img src="images/logo.png" alt="Davie's Burger Logo">
+    <section id="content">
+        <img src="images/logo-transparent.png" alt="Davie's Burger Logo">
         <hr>
         <form action="" method="post">
             <h1>Create Your Burger</h1>
+            <section class="Sections">
+                <label for="protein">What type of protein would you like?</label>
+                <input type="text" name="protein" id="protein">
+                <hr>
+            </section>
+            <section class="Sections">
+                <label for="patties">How many patties would you like?</label>
+                <input type="number" name="patties" id="patties">
+                <hr>
+            </section>
+            <section class="Sections">
+                <label for="cooking">How do you want your patty cooked?</label>
+                <br>
+                <span>Rare</span><input type="range" name="cooking" id="cooking"><span>Well-Done</span>
+                <hr>
+            </section>
+            <section class="Sections">
+                <span>What toppings would you like?</span>
+                <br>
+                <input type="checkbox" name="toppings" id="lettuce" value="Lettuce">
+                <label for="lettuce">Lettuce</label>
+                <input type="checkbox" name="toppings" id="tomato">
+                <label for="tomato">Tomato</label>
+                <input type="checkbox" name="toppings" id="onion">
+                <label for="onion">Onion</label>
+                <hr>
+            </section>
+            <section class="Sections">
+                <span>Would you like to add cheese?</span>
+                <br>
+                <input type="radio" name="cheese" id="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="cheese" id="no">
+                <label for="no">No</label>
+                <hr>
+            </section>
         </form>
     </section>
 </body>
