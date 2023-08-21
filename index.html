@@ -19,42 +19,70 @@
         <hr>
         <form action="" method="post">
             <h1>Create Your Burger</h1>
-            <section class="Sections">
+            <section class="Protein">
                 <label for="protein">What type of protein would you like?</label>
-                <input type="text" name="protein" id="protein">
+                <input type="text" name="protein" id="protein" maxlength="14">
                 <hr>
             </section>
-            <section class="Sections">
+            <section class="Patties">
                 <label for="patties">How many patties would you like?</label>
-                <input type="number" name="patties" id="patties">
+                <input type="number" name="patties" id="patties" step="1" min="1" max="3">
                 <hr>
             </section>
-            <section class="Sections">
+            <section class="Cooking">
                 <label for="cooking">How do you want your patty cooked?</label>
                 <br>
-                <span>Rare</span><input type="range" name="cooking" id="cooking"><span>Well-Done</span>
+                <span>Rare</span>
+                <input type="range" name="cooking" id="cooking" step="0.5" min="0" max="5">
+                <span>Well-Done</span>
                 <hr>
             </section>
-            <section class="Sections">
+            <section class="Toppings">
                 <span>What toppings would you like?</span>
                 <br>
                 <input type="checkbox" name="toppings" id="lettuce" value="Lettuce">
                 <label for="lettuce">Lettuce</label>
-                <input type="checkbox" name="toppings" id="tomato">
+                <input type="checkbox" name="toppings" id="tomato" value="Tomato">
                 <label for="tomato">Tomato</label>
-                <input type="checkbox" name="toppings" id="onion">
+                <input type="checkbox" name="toppings" id="onion" value="Onion">
                 <label for="onion">Onion</label>
                 <hr>
             </section>
-            <section class="Sections">
+            <section class="Cheese">
                 <span>Would you like to add cheese?</span>
                 <br>
-                <input type="radio" name="cheese" id="yes">
+                <input type="radio" name="cheese" id="yes" value="yes">
                 <label for="yes">Yes</label>
-                <input type="radio" name="cheese" id="no">
+                <input type="radio" name="cheese" id="no" value="no">
                 <label for="no">No</label>
                 <hr>
             </section>
+            <section class="Buns">
+                <label for="bun">What type of bun would you like?</label>
+                <select name="bun" id="bun">
+                    <option value="sesame">Sesame</option>
+                    <option value="cinnamon">Cinnamon</option>
+                    <option value="butter-bread">Butter-bread</option>
+                </select>
+                <hr>
+            </section>
+            <section class="Sauce">
+                <label for="sauce">What type of Sauce would you like?</label>
+                <input list="sauces" name="sauce" id="sauce">
+                <datalist id="sauces">
+                    <option value="Magarita"></option>
+                    <option value="BBQ"></option>
+                    <option value="lemon pepper"></option>
+                    <option value="garlic"></option>
+                </datalist>
+                <hr>
+            </section>
+            <section class="Other">
+                <label for="others">Anything else you want to add?</label>
+                <br>
+                <textarea name="other" id="others" rows="3" cols="15"></textarea>
+            </section>
+            <input type="submit" value="Submit" id="submit-button">
         </form>
     </section>
 </body>
